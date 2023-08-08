@@ -39,6 +39,6 @@ void main()
 		edgesArr[i] = { src, dest };
 	}
 
-	Graph G(n, m, edgesArr);
+	Graph myGraph(n, m, edgesArr);
 
 }

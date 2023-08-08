@@ -2,13 +2,17 @@
 #include <iostream>
 #include <vector>
 #include <list>
-using std::vector;
-using std::list;
 
 class Vertex
 {
+	static unsigned int amount;
 	unsigned int id;
 	char color = 'w'; //w = white, g = gray, b = black
+	std::list<Vertex> neighbors;
 public:
-	Vertex(unsigned int id) : id(id) {}
+	Vertex() : id(++amount) {}
+
+	//Methods:
+	void addNeighbor(Vertex& neighbor);
 };
+unsigned int Vertex::amount = 0;
